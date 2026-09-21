@@ -1,10 +1,8 @@
 import { getTypeStructure, optimizeTypeStructure } from "./get-type-structure";
 import { Options } from "./model";
-import { shim } from "es7-shim/es7-shim";
 import { getInterfaceDescriptions, getInterfaceStringFromDescription } from "./get-interfaces";
 import { getNames } from "./get-names";
 import { isArray, isObject } from "./util";
-shim();
 
 export default function JsonToTS(json: any, userOptions?: Options): string[] {
   const defaultOptions: Options = {

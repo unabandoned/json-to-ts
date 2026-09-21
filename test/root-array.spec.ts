@@ -1,3 +1,4 @@
+import { describe, it } from "node:test";
 import * as assert from "assert";
 import { removeWhiteSpace } from "./util/index";
 import JsonToTS from "../src/index";
@@ -19,7 +20,7 @@ describe("Root array type", function() {
     unsupportedArrays.forEach(arr => {
       try {
         JsonToTS(arr);
-        assert(false, "error should be thrown");
+        assert.ok(false, "error should be thrown");
       } catch (e) {
         assert.strictEqual(e.message, expectedMessage);
         if (e.message !== expectedMessage) throw e;
@@ -40,7 +41,7 @@ describe("Root array type", function() {
 
     interfaces.forEach(i => {
       const noWhiteSpaceInterface = removeWhiteSpace(i);
-      assert(expectedTypes.includes(noWhiteSpaceInterface));
+      assert.ok(expectedTypes.includes(noWhiteSpaceInterface));
     });
     assert.equal(interfaces.length, 1);
   });
@@ -58,7 +59,7 @@ describe("Root array type", function() {
 
     interfaces.forEach(i => {
       const noWhiteSpaceInterface = removeWhiteSpace(i);
-      assert(expectedTypes.includes(noWhiteSpaceInterface));
+      assert.ok(expectedTypes.includes(noWhiteSpaceInterface));
     });
     assert.equal(interfaces.length, 1);
   });
@@ -77,7 +78,7 @@ describe("Root array type", function() {
 
     interfaces.forEach(i => {
       const noWhiteSpaceInterface = removeWhiteSpace(i);
-      assert(expectedTypes.includes(noWhiteSpaceInterface));
+      assert.ok(expectedTypes.includes(noWhiteSpaceInterface));
     });
     assert.equal(interfaces.length, 1);
   });

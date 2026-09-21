@@ -1,3 +1,4 @@
+import { describe, it } from "node:test";
 import * as assert from "assert";
 import { removeWhiteSpace } from "./util/index";
 import JsonToTS from "../src/index";

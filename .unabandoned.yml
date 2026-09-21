@@ -1,0 +1,26 @@
+schema: 1
+
+package: "@unabandoned/json-to-ts"
+
+upstream:
+  repo: MariusAlch/json-to-ts
+  reason: "no release since 2024-04-18; issues and pull requests unanswered"
+
+summary: >-
+  Turns a JSON value into TypeScript interface declarations, inferring nested
+  types, merging shapes across array elements and naming the interfaces after
+  the keys that hold them.
+
+why-forked: >-
+  IT-Tools' JSON-to-TypeScript tool ships it in the browser bundle, and upstream
+  went quiet carrying es7-shim (last published 2016) plus pluralize 3.x, five
+  majors behind. Forked to drop the shim - every method it polyfilled has been
+  native for years - and to keep the rest of the tree current for consumers.
+
+status: active
+
+used-by:
+  - consumer: TheTechNetwork/it-tools
+    purpose: "Powers the 'JSON to TypeScript' tool."
+
+tags: [typescript, json, codegen, types]

@@ -1,5 +1,5 @@
 {
-  "name": "json-to-ts",
+  "name": "@unabandoned/json-to-ts",
   "version": "2.1.0",
   "description": "Convert json object to typescript interfaces",
   "keywords": [
@@ -14,31 +14,37 @@
   "types": "build/src/index.d.ts",
   "main": "build/src/index.js",
   "scripts": {
-    "prepublish": "npm run build",
     "build": "rm -rf ./build && tsc",
-    "start": "nodemon -e ts -w src -x 'ts-node src/index.ts'",
-    "test": "npm run build && mocha ./test/js-integration/index.js && mocha ./build/test",
-    "test-reload": "nodemon -e ts -w test -w src -x 'npm test'"
+    "test": "npm run build && node --test build/test/*.spec.js test/js-integration/index.js",
+    "prepublishOnly": "npm run build",
+    "prepare": "git config core.hooksPath .githooks || true"
   },
   "author": "https://github.com/mariusalch",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MariusAlch/json-to-ts.git"
+    "url": "git+https://github.com/unabandoned/json-to-ts.git"
   },
   "bugs": {
-    "url": "https://github.com/MariusAlch/json-to-ts/issues"
+    "url": "https://github.com/unabandoned/json-to-ts/issues"
   },
   "license": "ISC",
   "dependencies": {
-    "es7-shim": "^6.0.0",
-    "hash.js": "^1.0.3",
-    "pluralize": "^3.1.0"
+    "hash.js": "^1.1.7",
+    "pluralize": "^8.0.0"
   },
   "devDependencies": {
-    "@types/mocha": "2.2.40",
-    "@types/node": "^7.0.12",
-    "@types/pluralize": "^0.0.27",
-    "mocha": "^6.1.4",
-    "typescript": "^3.8.3"
-  }
+    "@commitlint/cli": "21.2.2",
+    "@commitlint/config-conventional": "21.2.2",
+    "@types/node": "24.13.5",
+    "@types/pluralize": "0.0.33",
+    "typescript": "6.0.3"
+  },
+  "homepage": "https://github.com/unabandoned/json-to-ts#readme",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "files": [
+    "build/src/"
+  ]
 }
