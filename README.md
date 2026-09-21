@@ -4,12 +4,17 @@
 
 ### Convert json object to typescript interfaces
 
+> A maintained fork of [MariusAlch/json-to-ts](https://github.com/MariusAlch/json-to-ts),
+> which has had no release since April 2024. Published as
+> [`@unabandoned/json-to-ts`](https://www.npmjs.com/package/@unabandoned/json-to-ts);
+> the API is unchanged from upstream.
+
 # Example
 
 ### Code
 
 ```javascript
-const JsonToTS = require('json-to-ts')
+const JsonToTS = require('@unabandoned/json-to-ts')
 
 const json = {
   cats: [
@@ -48,5 +53,5 @@ interface Cat {
 # Setup
 
 ```sh
-$ npm install --save json-to-ts
+$ npm install --save @unabandoned/json-to-ts
 ```

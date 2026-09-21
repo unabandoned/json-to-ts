@@ -1,14 +1,17 @@
 {
-    "compilerOptions": {
-        "declaration": true,
-        "module": "commonjs",
-        "target": "es5",
-        "noImplicitAny": false,
-        "sourceMap": true,
-        "outDir": "build",
-        "lib": [
-          "es2017",
-          "dom"
-        ]
-    }
+  "compilerOptions": {
+    "declaration": true,
+    "module": "node18",
+    "target": "es2020",
+    "lib": ["es2020"],
+    "types": ["node"],
+    // Upstream compiled without `strict`; TypeScript 6 turns it on by default.
+    // Keeping it off here keeps this adoption to dependencies and tooling —
+    // turning it on is a real code change (~20 null-safety errors) and belongs
+    // in its own pull request.
+    "strict": false,
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "outDir": "build"
+  }
 }
