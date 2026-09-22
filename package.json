@@ -29,7 +29,7 @@
   },
   "license": "ISC",
   "dependencies": {
-    "hash.js": "^1.1.7",
+    "@unabandoned/hash.js": "^1.4.1",
     "pluralize": "^8.0.0"
   },
   "devDependencies": {

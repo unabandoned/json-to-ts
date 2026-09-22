@@ -1,4 +1,4 @@
-import * as hash from "hash.js";
+import * as hash from "@unabandoned/hash.js";
 
 import { TypeDescription, TypeStructure } from "./model";
 import { isHash, getTypeDescriptionGroup, findTypeById, isArray, isObject, onlyUnique, isDate } from "./util";
