@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.1](https://github.com/unabandoned/json-to-ts/compare/json-to-ts-v3.1.0...json-to-ts-v3.1.1) (2026-09-23)
+
+
+### Bug Fixes
+
+* stop dev-only commits from cutting releases ([#11](https://github.com/unabandoned/json-to-ts/issues/11)) ([7b870c8](https://github.com/unabandoned/json-to-ts/commit/7b870c81cfb4fe0be200cfd371d476f0df55cc66))
+
 ## [3.1.0](https://github.com/unabandoned/json-to-ts/compare/json-to-ts-v3.0.0...json-to-ts-v3.1.0) (2026-09-22)
 
 
