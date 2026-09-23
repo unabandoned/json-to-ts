@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.1](https://github.com/unabandoned/json-to-ts/compare/json-to-ts-v3.1.0...json-to-ts-v3.1.1) (2026-09-23)
+
+
+### Dependencies & maintenance
+
+* **deps:** update commitlint monorepo to v21.2.3 ([#9](https://github.com/unabandoned/json-to-ts/issues/9)) ([b789802](https://github.com/unabandoned/json-to-ts/commit/b78980237a6601fb67e0dbdcdfa43140b84e66fe))
+
 ## [3.1.0](https://github.com/unabandoned/json-to-ts/compare/json-to-ts-v3.0.0...json-to-ts-v3.1.0) (2026-09-22)
 
 
